@@ -1,5 +1,6 @@
 let activeCard = 'dateCard';
 let activeLang = 'norLang';
+let buttonEffectDone = false;
 
 const cards = document.querySelectorAll('.columnCard');
 const langButtons = document.querySelectorAll('.toggleButton');
@@ -217,7 +218,6 @@ confirmButton.addEventListener('click', () => {
 declineButton.addEventListener('click', () => {
   const bt = content?.[activeLang]?.behindText?.appearingText;
   if (bt && appearingText) appearingText.innerHTML = bt;
-
   confirmButton.classList.add('removeConfirm');
   declineButton.classList.add('removeDecline');
   appearingText.classList.add('appearingText');
