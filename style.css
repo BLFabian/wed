@@ -167,6 +167,14 @@ font-size:2.5rem;
     font-size: 1.5rem;
 }
 
+.korLang.giftContainer .subFont {
+    display:none;
+}
+
+.engLang.giftContainer .subFont {
+    display:none;
+}
+
 
 .subFont {
     color: var(--wed-fontcl1);
