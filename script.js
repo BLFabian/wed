@@ -148,6 +148,7 @@ function updateContainerClass() {
     // Reset previous state
     container.classList.remove('dateContainer', 'foodContainer', 'giftContainer', 'micContainer');
     container.classList.remove('korLang'); // remove language-specific class
+    container.classList.remove('engLang'); // remove language-specific class
   
     // Card-specific container styles
     if (activeCard === 'dateCard') container.classList.add('dateContainer');
@@ -155,10 +156,12 @@ function updateContainerClass() {
     if (activeCard === 'giftCard') container.classList.add('giftContainer');
     if (activeCard === 'micCard') container.classList.add('micContainer');
   
-    // Language-specific class (only Korean requested)
     if (activeLang === 'korLang') {
-      container.classList.add('korLang');
-    }
+        container.classList.add('korLang');
+      }
+    if (activeLang === 'engLang') {
+        container.classList.add('engLang');
+      }
   }
   
 
