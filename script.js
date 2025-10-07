@@ -12,7 +12,7 @@ const content = {
     dateCard: {
       firstText: "23.05.2026",
       secondText: "16:00",
-      thirdText: "Frogner<br>Hovedgård",
+      thirdText: "Frogner<br>Hovedgaard",
     },
     foodCard: {
       firstText: "Allergier?",
@@ -181,15 +181,13 @@ langButtons.forEach(langButton => {
 });
 
 // --- Events: confirm/decline buttons ---
+// --- Events: confirm/decline buttons ---
 confirmButton.addEventListener('click', () => {
-  window.location.href = "mailto:bjoerne.larsen@gmail.com?subject=Confirmation";
-});
-confirmButton.addEventListener('touchstart', () => confirmButton.click(), { passive: true });
-
-declineButton.addEventListener('click', () => {
-  window.location.href = "mailto:bjoerne.larsen@gmail.com?subject=Disconfirmation";
-});
-declineButton.addEventListener('touchstart', () => declineButton.click(), { passive: true });
-
+    window.location.href = "mailto:bjoerne.larsen@gmail.com?subject=Confirmation";
+  });
+  
+  declineButton.addEventListener('click', () => {
+    window.location.href = "mailto:bjoerne.larsen@gmail.com?subject=Disconfirmation";
+  });
 // --- Initial state ---
 refreshUI();
