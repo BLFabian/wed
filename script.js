@@ -142,16 +142,25 @@ const content = {
 
 // --- Helpers ---
 function updateContainerClass() {
-  const container = document.querySelector('.innerContainer');
-  if (!container) return;
-
-  container.classList.remove('dateContainer', 'foodContainer', 'giftContainer', 'micContainer');
-
-  if (activeCard === 'dateCard') container.classList.add('dateContainer');
-  if (activeCard === 'foodCard') container.classList.add('foodContainer');
-  if (activeCard === 'giftCard') container.classList.add('giftContainer');
-  if (activeCard === 'micCard') container.classList.add('micContainer');
-}
+    const container = document.querySelector('.innerContainer');
+    if (!container) return;
+  
+    // Reset previous state
+    container.classList.remove('dateContainer', 'foodContainer', 'giftContainer', 'micContainer');
+    container.classList.remove('korLang'); // remove language-specific class
+  
+    // Card-specific container styles
+    if (activeCard === 'dateCard') container.classList.add('dateContainer');
+    if (activeCard === 'foodCard') container.classList.add('foodContainer');
+    if (activeCard === 'giftCard') container.classList.add('giftContainer');
+    if (activeCard === 'micCard') container.classList.add('micContainer');
+  
+    // Language-specific class (only Korean requested)
+    if (activeLang === 'korLang') {
+      container.classList.add('korLang');
+    }
+  }
+  
 
 function updateTexts() {
   const texts = content?.[activeLang]?.[activeCard];
