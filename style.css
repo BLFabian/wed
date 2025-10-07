@@ -274,32 +274,16 @@ z-index:30;
   }
 
   .removeConfirm {
-    animation:flyOutLeft 4s ease-in-out forwards;
+    transition: transform 3s ease-in-out;
+    transform:rotate(250deg) translateX(100vw) translateY(130vw);
   }
 
   .removeDecline {
-    animation:flyOutRight 2s 250ms ease-in-out forwards;
+    transition: transform 2.5s ease-in-out 0.5s;
+    transform:rotate(-250deg) translateX(-100vw) translateY(-130vw);
   }
 
-  @keyframes flyOutLeft {
-0% {
-transform:rotate(0deg) translateX(0vw) translateY(0vw);
-}
 
-100% {
-    transform:rotate(250deg) translateX(100vw) translateY(130vw);
-}
-  }
-
-  @keyframes flyOutRight {
-    0% {
-    transform:rotate(0deg) translateX(0vw) translateY(0vw);
-    }
-    
-    100% {
-        transform:rotate(-250deg) translateX(-100vw) translateY(-130vw);
-    }
-      }
 
       .behindText {
         opacity:0;
