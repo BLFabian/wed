@@ -37,7 +37,8 @@ const content = {
       decline: "Avslå",
     },
     behindText: {
-        appearingText: "Knappene, slik som giftemål, er hovedsakelig symbolske.<br>Send helst en bekreftelse til bjoerne.larsen@gmail.com."
+      appearingText:
+        "Knappene, slik som giftemål, er hovedsakelig symbolske.<br>Send helst en bekreftelse hvor enn du ble kontaktet."
     },
   },
   engLang: {
@@ -68,7 +69,8 @@ const content = {
       decline: "Decline",
     },
     behindText: {
-        appearingText: "The buttons, like marriage, are mostly symbolic.<br>Please send a confirmation to bjoerne.larsen@gmail.com.",
+      appearingText:
+        "The buttons, like marriage, are mostly symbolic.<br>Please send a confirmation wherever you were contacted."
     },
   },
   korLang: {
@@ -99,7 +101,8 @@ const content = {
       decline: "불참",
     },
     behindText: {
-        appearingText: "결혼과 같은 버튼은 대부분 상징적입니다.<br>bjoerne.larsen@gmail.com 으로 확인 메일을 보내주세요.",
+      appearingText:
+        "결혼과 같은 버튼은 대부분 상징적입니다.<br>연락받으신 곳으로 확인을 보내주세요."
     },
   },
   denLang: {
@@ -130,7 +133,8 @@ const content = {
       decline: "Afslå",
     },
     behindText: {
-        appearingText: "Knapperne, såsom ægteskab, er mest symbolske.<br>Send venligst en bekræftelse til bjoerne.larsen@gmail.com.",
+      appearingText:
+        "Knapperne, såsom ægteskab, er mest symbolske.<br>Send venligst en bekræftelse dér, hvor du blev kontaktet."
     },
   },
 };
@@ -149,27 +153,26 @@ function updateContainerClass() {
 }
 
 function updateTexts() {
-    const texts = content?.[activeLang]?.[activeCard];
-    if (!texts) return;
-  
-    document.getElementById("firstText").innerHTML = texts.firstText;
-    document.getElementById("secondText").innerHTML = texts.secondText;
-    document.getElementById("thirdText").innerHTML = texts.thirdText;
-  
-    // Update button text
-    const btns = content?.[activeLang]?.buttons;
-    if (btns) {
-      confirmButton.innerHTML = btns.confirm;
-      declineButton.innerHTML = btns.decline;
-    }
-  
-    // 🔄 Update behind text based on language
-    const bt = content?.[activeLang]?.behindText?.appearingText;
-    if (bt && appearingText) {
-      appearingText.innerHTML = bt;
-    }
+  const texts = content?.[activeLang]?.[activeCard];
+  if (!texts) return;
+
+  document.getElementById("firstText").innerHTML = texts.firstText;
+  document.getElementById("secondText").innerHTML = texts.secondText;
+  document.getElementById("thirdText").innerHTML = texts.thirdText;
+
+  // Update button text
+  const btns = content?.[activeLang]?.buttons;
+  if (btns) {
+    confirmButton.innerHTML = btns.confirm;
+    declineButton.innerHTML = btns.decline;
   }
-  
+
+  // 🔄 Update behind text based on language
+  const bt = content?.[activeLang]?.behindText?.appearingText;
+  if (bt && appearingText) {
+    appearingText.innerHTML = bt;
+  }
+}
 
 function refreshUI() {
   updateContainerClass();
@@ -201,18 +204,25 @@ langButtons.forEach(langButton => {
 });
 
 // --- Events: confirm/decline buttons ---
-// --- Events: confirm/decline buttons ---
 confirmButton.addEventListener('click', () => {
-    confirmButton.classList.add('removeConfirm');
-    declineButton.classList.add('removeDecline');
-    appearingText.classList.add('appearingText');
-  });
-  
-  declineButton.addEventListener('click', () => {
-    confirmButton.classList.add('removeConfirm');
-    declineButton.classList.add('removeDecline');
-    appearingText.classList.add('appearingText');
-  });
+  // ensure current language's behind text is set
+  const bt = content?.[activeLang]?.behindText?.appearingText;
+  if (bt && appearingText) appearingText.innerHTML = bt;
+
+  confirmButton.classList.add('removeConfirm');
+  declineButton.classList.add('removeDecline');
+  appearingText.classList.add('appearingText');
+});
+
+declineButton.addEventListener('click', () => {
+  const bt = content?.[activeLang]?.behindText?.appearingText;
+  if (bt && appearingText) appearingText.innerHTML = bt;
+
+  confirmButton.classList.add('removeConfirm');
+  declineButton.classList.add('removeDecline');
+  appearingText.classList.add('appearingText');
+});
+
 // --- Initial state ---
 refreshUI();
 
