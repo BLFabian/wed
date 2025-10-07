@@ -104,7 +104,7 @@ filter: drop-shadow(0px 0px 1.5rem rgb(0,0,0,0.10));
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    width:75vw;
+    width:85vw;
     max-width:700px;
     height:25rem;
     z-index:100;
@@ -201,6 +201,7 @@ span {
 .dateContainer .respondContainer {
     display:flex;
     flex-direction:column;
+    align-items:center;
 }
 
 .respondContainer {
@@ -214,6 +215,7 @@ font-size:1.5rem;
 border-radius:0.31rem;
 padding:0.4rem 0.2rem 0.4rem 0.2rem;
 box-shadow: 0.05rem 0.05rem 0.1rem 0rem rgba(0, 0, 0, 0.2);
+z-index:30;
 }
 
 
@@ -270,3 +272,43 @@ box-shadow: 0.05rem 0.05rem 0.1rem 0rem rgba(0, 0, 0, 0.2);
       min-height:40px;
     }
   }
+
+  .removeConfirm {
+    animation:flyOutLeft 4s ease-in-out forwards;
+  }
+
+  .removeDecline {
+    animation:flyOutRight 2s 250ms ease-in-out forwards;
+  }
+
+  @keyframes flyOutLeft {
+0% {
+transform:rotate(0deg) translateX(0vw) translateY(0vw);
+}
+
+100% {
+    transform:rotate(250deg) translateX(100vw) translateY(130vw);
+}
+  }
+
+  @keyframes flyOutRight {
+    0% {
+    transform:rotate(0deg) translateX(0vw) translateY(0vw);
+    }
+    
+    100% {
+        transform:rotate(-250deg) translateX(-100vw) translateY(-130vw);
+    }
+      }
+
+      .behindText {
+        opacity:0;
+        transition: opacity 5050ms ease-in-out;
+        position:absolute;
+        text-wrap:balance;
+        z-index:10;
+      }
+
+      .appearingText {
+        opacity:1;
+      }
