@@ -12,7 +12,7 @@ const content = {
     dateCard: {
       firstText: "23.05.2026",
       secondText: "16:00",
-      thirdText: "Frogner<br>Hovedgaard",
+      thirdText: "Frogner<br>Hovedgård",
     },
     foodCard: {
       firstText: "Allergier?",
