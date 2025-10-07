@@ -61,6 +61,7 @@ display:flex;
 align-items:center;
 flex-direction:column;
 filter: drop-shadow(0px 0px 1.5rem rgb(0,0,0,0.10));
+overflow:hidden;
     }
 
     .columnColumn {
@@ -219,7 +220,7 @@ span {
 
 
 .respondContainer {
-    display:none;
+        justify-content: center;
 }
 
 .dateContainer .respondContainer {
