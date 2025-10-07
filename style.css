@@ -221,6 +221,7 @@ span {
 
 .respondContainer {
         justify-content: center;
+        display:none;
 }
 
 .dateContainer .respondContainer {
