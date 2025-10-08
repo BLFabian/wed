@@ -322,6 +322,7 @@ z-index:30;
 
 
       .behindText {
+        font-size:0.75rem;
         opacity:0;
         transition: opacity 5050ms ease-in-out;
         position:absolute;
