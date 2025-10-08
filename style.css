@@ -34,7 +34,7 @@
 
   
 
-body {
+html, body {
     font-family: 'Arial', sans-serif;
     background: var(--wed-prim);
     color: #333;
@@ -47,6 +47,16 @@ body {
     max-height:100vh;
     margin: 0;
     padding: 0;
+        height: 100dvh;
+        width: 100dvw;
+        margin: 0;
+        overflow: hidden;
+        overscroll-behavior: none;
+        -webkit-overflow-scrolling: auto;
+        background: var(--wed-prim);
+        display: flex;
+        align-items: center;
+        justify-content: center;
 }
 
 .wholeContainer {
