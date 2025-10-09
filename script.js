@@ -33,6 +33,12 @@ const content = {
       thirdText:
         "kathinkabl@gmail.com<br><i>eller</i> axelbl@gmail.com<br><i>eller</i> elias.bjornel@gmail.com<br>men det er nok best med<br>kathinkabl@gmail.com",
     },
+    suitCard: {
+        firstText: "Dress code?",
+        secondText: "Sommerlig bryllup",
+        thirdText:
+          "",
+      },
     buttons: {
       confirm: "Godta",
       decline: "Avslå",
@@ -65,6 +71,12 @@ const content = {
       thirdText:
         "kathinkabl@gmail.com<br><i>or</i> axelbl@gmail.com<br><i>or</i> elias.bjornel@gmail.com<br>but preferably<br>kathinkabl@gmail.com",
     },
+    suitCard: {
+        firstText: "Dress code?",
+        secondText: "Summery wedding-y",
+        thirdText:
+          "",
+      },
     buttons: {
       confirm: "Accept",
       decline: "Decline",
@@ -97,6 +109,12 @@ const content = {
       thirdText:
         "kathinkabl@gmail.com<br><i>또는</i> axelbl@gmail.com<br><i>또는</i> elias.bjornel@gmail.com<br>하지만 가장 좋은 것은<br>kathinkabl@gmail.com",
     },
+    suitCard: {
+        firstText: "Dress code?",
+        secondText: "여름 결혼식",
+        thirdText:
+          "",
+      },
     buttons: {
       confirm: "참석",
       decline: "불참",
@@ -129,6 +147,12 @@ const content = {
       thirdText:
         "kathinkabl@gmail.com<br><i>eller</i> axelbl@gmail.com<br><i>eller</i> elias.bjornel@gmail.com<br>men helst<br>kathinkabl@gmail.com",
     },
+    suitCard: {
+        firstText: "Dress code?",
+        secondText: "Summerlig weddingy",
+        thirdText:
+          "",
+      },
     buttons: {
       confirm: "Accepter",
       decline: "Afslå",
@@ -155,6 +179,7 @@ function updateContainerClass() {
     if (activeCard === 'foodCard') container.classList.add('foodContainer');
     if (activeCard === 'giftCard') container.classList.add('giftContainer');
     if (activeCard === 'micCard') container.classList.add('micContainer');
+    if (activeCard === 'suitCard') container.classList.add('suitContainer');
   
     if (activeLang === 'korLang') {
         container.classList.add('korLang');
