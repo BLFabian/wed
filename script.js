@@ -85,8 +85,7 @@ const content = {
       appearingText:
         "The buttons, like marriage, are mostly symbolic.<br>Please send a confirmation wherever you were contacted."
     },
-  },
-  korLang: {
+  },korLang: {
     dateCard: {
       firstText: "2026년 5월 23일",
       secondText: "오후 4시",
@@ -101,16 +100,16 @@ const content = {
       firstText: "선물?",
       secondText: "와 주시는 것만으로 충분해요!",
       thirdText:
-        "(그래도 원하신다면, 저희의 <i>주방 리모델링 기금</i>에 기부해 주세요)",
+        "",
     },
     micCard: {
-      firstText: "연설?",
+      firstText: "축사하실 의향 있으신가요?",
       secondText: "토스트마스터에게 연락해주세요!",
       thirdText:
-        "kathinkabl@gmail.com<br><i>또는</i> axelbl@gmail.com<br><i>또는</i> elias.bjornel@gmail.com<br>하지만 가장 좋은 것은<br>kathinkabl@gmail.com",
+        "kathinkabl@gmail.com<br><i>또는</i> axelbl@gmail.com<br><i>또는</i> elias.bjornel@gmail.com<br>하지만 아무래도<br>kathinkabl@gmail.com 이 가장 좋아요",
     },
     suitCard: {
-        firstText: "Dress code?",
+        firstText: "드레스 코드?",
         secondText: "여름 결혼식",
         thirdText:
           "",
@@ -121,9 +120,10 @@ const content = {
     },
     behindText: {
       appearingText:
-        "결혼과 같은 버튼은 대부분 상징적입니다.<br>연락받으신 곳으로 확인을 보내주세요."
+        "버튼을 수리중입니다.<br>연락받으신 곳으로 참석 여부를 알려주세요!"
     },
   },
+ 
   denLang: {
     dateCard: {
       firstText: "Tresogsnesogtyvende snes pluss to med halvfems",
