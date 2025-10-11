@@ -89,7 +89,7 @@ const content = {
     dateCard: {
       firstText: "2026년 5월 23일",
       secondText: "오후 4시",
-      thirdText: "프로그네르<br>저택",
+      thirdText: "프로그네르<br>저택<br>오슬로, 노르웨이",
     },
     foodCard: {
       firstText: "알레르기 있으신가요?",
