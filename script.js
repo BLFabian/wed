@@ -51,7 +51,7 @@ const content = {
   engLang: {
     dateCard: {
       firstText: "23 May 2026",
-      secondText: "4:00 PM",
+      secondText: "4:30 PM",
       thirdText: "Frogner<br>Manor",
     },
     foodCard: {
