@@ -13,7 +13,7 @@ const content = {
   norLang: {
     dateCard: {
       firstText: "23.05.2026",
-      secondText: "16:00",
+      secondText: "16:30",
       thirdText: "Frogner<br>Hovedgård",
     },
     foodCard: {
