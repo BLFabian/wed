@@ -1,5 +1,5 @@
 let activeCard = 'dateCard';
-let activeLang = 'norLang';
+let activeLang = 'korLang';
 let buttonEffectDone = false;
 
 const cards = document.querySelectorAll('.columnCard');
@@ -87,9 +87,9 @@ const content = {
     },
   },korLang: {
     dateCard: {
-      firstText: "2026년 5월 23일",
-      secondText: "오후 4시",
-      thirdText: "프로그네르<br>저택<br>오슬로, 노르웨이",
+      firstText: "파비안 & 정유은",
+      secondText: "2026년 5월 23일 오후 4시",
+      thirdText: "프로그네르 저택,<br>오슬로, 노르웨이",
     },
     foodCard: {
       firstText: "알레르기 있으신가요?",
